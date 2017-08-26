@@ -35,6 +35,7 @@ def btnEval():
     global operador
     result = str(eval(operador))
     text_input.set(result)
+    print(text_input)
     operador = ""
 
 txtDisplay = Entry(frame,
@@ -45,16 +46,19 @@ txtDisplay.grid(columnspan = 4)
 
 btn1 = Button(
     frame,
+    text = "1",
     font=("SHOWCARD GOTHIC", 50, 'bold'),
     command = lambda:btnClick(1)).grid(row=2,column=0)
 btn2 = Button(
     frame,
     font=("SHOWCARD GOTHIC", 50, 'bold'),
-    command = lambda:btnClick(2)).grid(row=2,column=1)
+    text = "2",
+    command = lambda:btnClick(2)).grid(row=2,column=3)
 Addition = Button(
     frame,
     font=("SHOWCARD GOTHIC", 50, 'bold'),
-    command = lambda:btnClick('+')).grid(row=2,column=3)
+    text = "+",
+    command = lambda:btnClick('+')).grid(row=2,column=2)
 Equals = Button(
     frame,
     font=("SHOWCARD GOTHIC", 50, 'bold'),
